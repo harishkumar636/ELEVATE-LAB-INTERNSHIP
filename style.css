@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,108 +5,75 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #8e2de2, #4a00e0);
-  color: #fff;
-  overflow-x: hidden;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Container */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
 }
 
-/* Header */
-header {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 1rem 0;
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.header-container {
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#addBtn {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#addBtn:hover {
+  background: #218838;
+}
+
+#taskList {
+  list-style: none;
+}
+
+.task-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffdf00;
-  animation: glow 2s infinite alternate;
+.task-item.completed span {
+  text-decoration: line-through;
+  color: gray;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 10px #ffdf00; }
-  to { text-shadow: 0 0 20px #ffff33, 0 0 30px #ffdf00; }
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ffdf00;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  background: radial-gradient(circle at top left, #00c6ff, #0072ff);
-  animation: gradientFlow 20s ease infinite;
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 0 3px 5px rgba(0,0,0,0.2);
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #f0f0f0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-btn {
-  padding: 0.8rem 2rem;
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
+.task-item button {
+  background: #dc3545;
+  color: white;
   border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  color: #fff;
-  font-size: 1rem;
-  tr
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.task-item button:hover {
+  background: #c82333;
+}
